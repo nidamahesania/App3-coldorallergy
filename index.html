@@ -17,10 +17,14 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+This app is used to distinguish between having a cold or having allergies and accomplishes this by presenting 4 questions to 
+sort the patients symptoms accordingly and gives the results at the end of the questionnaire. 
  
+
 Known Issues:
-blah, blah, blah, blah
+An issue that I had was that I could not write a comment in the bottom of the HTML section but I could everywhere else above it.
+I was also initially having issues with my percentages page and could not see the percentages at the end of the view results but 
+ended up troubling shooting it multiple times and made it work by changing the format. 
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -136,8 +140,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!--this is the code for the second question--> 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
-		
+		<h1>Question 2</h1>	
 	</div>
 	
 	<div id="content" class="w3-container">
@@ -145,8 +148,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<!--creates a yes or no button so patients can select it depending on what symptoms they are facing--> 
 			<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 			<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-		
-
 		
 </div>
 
@@ -162,8 +163,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<!--creates a yes or no button so patients can select it depending on what symptoms they are facing--> 
 			<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 			<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
-		
-		
 		
 	</div>
 	
@@ -181,36 +180,34 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
 			<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
 		
-		
-		
 	</div>
 </div>
 <!--this is the code for the pre-results page-->
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Let's see your results!</h1>
-		
+
 	</div>
-	
+
 	<div id="content" class="w3-container">
 		<p>View your results!</p>
-	
-			<a href="#six";" class="w3-btn w3-black"> Click to see your results!</a>
+	<!--a button that displays the percentages and results when clicked---> 
+			<a href="#six";" class="w3-btn w3-black"> Click to see your results!</a>	
+			
 	</div>
-
-
+							
 <div class="page" id="six">
+
 	<div class="w3-container w3-flat-carrot">
 		<h1>Let's see your results!!</h1>
-						
-			
+							
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p> These are your results! </p>
 		<a onclick="displayResults();" class="w3-btn w3-black">Show Results</a>
 		<p id="results"></p>
-			
+		
 	</div>
 </div>	
 
