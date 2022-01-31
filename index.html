@@ -36,23 +36,34 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+	//added variables to define allergy and cold count 
+	//set them equal to 0 to make sure initial count is 0 
         var allergy_count = 0;
         var cold_count = 0;
 
-
+	
+	//this functions adds up the answers to the questions to count for allergy
+	//the allergyAdd function adds 1 count to the variable allergy count 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 
         }
-
+	
+	//this functions adds up the answers to the questions to count for cold
+	//the coldAdd function adds 1 count to the variable cold count 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
 	
+		//this function is used to display the results that you get to determine if you have a cold or allergies
 		function displayResults(){
+			//these variables are used to calculate the percentage for both allergies and cold at the end of the questionnaire 
+			//the numbers that are stored will be divided by four and multiplied by 100 to get the percent of having a cold or allergies 
 			var coldPercent = cold_count/4 * 100; 
 			var allergyPercent = allergy_count/4 * 100; 
 			
+			//outputs the results recorded in the allergy_count and cold_count variables by inserting new variables in the HTML code 
+			//<br> means line break 
 			var resultText = document.getElementById("results");
 			resultText.innerHTML = "Probability it is allergies = "+ allergyPercent + "%" + "<br> Probability it is a cold = "+ coldPercent + "%" + "<br>" + "<br> Your diagnostic test is complete!";
 	};	
@@ -60,7 +71,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   </script>
 
 
-
+<!-- the style below is used to design the app through its dimensions for each category --->
 <style>	
 .body {
      margin: 0em;
@@ -88,32 +99,41 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<h1>Cold or Allergies?</h1>
 </div>
 
+	<!-- </div> is a tag that is used to create sections between pages ---> 
+	
+<!-- the beginning of the code -->
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
+	<!--the <a href enables a button to lead to the next page--> 
+	<!--href is for hypertext reference and is used to move on to the next page--> 
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
-	
+	<!--<p> means paragraphs and it is disp;ayed below the header with questions inserted between <p> and </p> --->
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
+<!--this is the code for the first question--> 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
+		<!--this is where the header goes at the top of the page -->
 		<h1>Question 1</h1>
 		
 	</div>
 	
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p>  
-		
+		<!--creates a yes or no button so patients can select it depending on what symptoms they are facing--> 
+		<!--onclick= is an event handler thhat directs the browser to run a script when the patient clicks a button--> 
+		<!--class= allows to select and access specific elements--> 
+		<!--class="w3-btn(buttton) w3-black" is used for the button appearance and design--> 
 		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-		
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
 
 
     	</div>
 </div>
 
+<!--this is the code for the second question--> 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
@@ -122,15 +142,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
-		
+			<!--creates a yes or no button so patients can select it depending on what symptoms they are facing--> 
 			<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
-		
 			<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
 		
 
 		
 </div>
 
+<!--this is the code for the third question--> 
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -139,9 +159,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
-		
+			<!--creates a yes or no button so patients can select it depending on what symptoms they are facing--> 
 			<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
-		
 			<a href="#four" onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
 		
 		
@@ -149,7 +168,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 </div>
-
+<!--this is the code for the fourth question--> 
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
@@ -158,16 +177,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
-		
+			<!--creates a yes or no button so patients can select it depending on what symptoms they are facing--> 
 			<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
-		
 			<a href="#five" onclick="coldAdd();" class="w3-btn w3-black"> No </a>
 		
 		
 		
 	</div>
 </div>
-	
+<!--this is the code for the pre-results page-->
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Let's see your results!</h1>
@@ -179,8 +197,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 			<a href="#six";" class="w3-btn w3-black"> Click to see your results!</a>
 	</div>
-	
-
+									
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Let's see your results!!</h1>
