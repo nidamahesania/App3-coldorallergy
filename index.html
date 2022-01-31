@@ -24,7 +24,9 @@ sort the patients symptoms accordingly and gives the results at the end of the q
 Known Issues:
 An issue that I had was that I could not write a comment in the bottom of the HTML section but I could everywhere else above it.
 I was also initially having issues with my percentages page and could not see the percentages at the end of the view results but 
-ended up troubling shooting it multiple times and made it work by changing the format. 
+ended up troubling shooting it multiple times and made it work by changing the format. Another issue that I had was not being able 
+to add a comment for line 205 and below and I asked a mentor and we were both confused why it was being like that so I added 
+the comment for line 205 on line 196 which was the last line that I could add a comment on. 
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -112,7 +114,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!--the <a href enables a button to lead to the next page--> 
 	<!--href is for hypertext reference and is used to move on to the next page--> 
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
-	<!--<p> means paragraphs and it is disp;ayed below the header with questions inserted between <p> and </p> --->
+	<!--<p> means paragraphs and it is displayed below the header with questions inserted between <p> and </p> --->
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
@@ -191,18 +193,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
 		<p>View your results!</p>
-	<!--a button that displays the percentages and results when clicked---> 
-			<a href="#six";" class="w3-btn w3-black"> Click to see your results!</a>	
-			
+	<!--a button that displays the percentages and results when clicked for line 205---> 
+			<a href="#six";" class="w3-btn w3-black"> Click to see your results!</a>								
 	</div>
 							
 <div class="page" id="six">
-
+			
 	<div class="w3-container w3-flat-carrot">
 		<h1>Let's see your results!!</h1>
-							
+						
 	</div>
-	
+						
 	<div id="content" class="w3-container">
 		<p> These are your results! </p>
 		<a onclick="displayResults();" class="w3-btn w3-black">Show Results</a>
